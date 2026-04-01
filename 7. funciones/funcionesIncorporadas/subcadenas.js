@@ -9,30 +9,3 @@ console.log(cadena1)
 //subcadena Mundo
 let cadena2 = cadena3.substring(5, 10)
 console.log(cadena2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

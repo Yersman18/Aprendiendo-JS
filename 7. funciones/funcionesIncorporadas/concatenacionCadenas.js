@@ -7,4 +7,3 @@ console.log(cadena3)
 
 // concatenacion con String Interpolation
 cadena4 = `${cadena1} ${cadena2}`
-console.log(cadena4)

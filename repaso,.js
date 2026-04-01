@@ -1,20 +1,38 @@
-// Ejercicios de arreglos
-// 1. Recorrer un arreglo
-/*
-let numeros = [10, 20, 30, 40];
+// crear una funcion que reciba un string lo convierta a numero y retorne ese nuemero multiplicado por dos
 
-for(let i = 0; i < numeros.length; i++){
-    console.log(numeros[i])
+let numero = "23"
+
+function convertir(num){
+    let convertidor = parseInt(num)
+    return convertidor * 2
 }
-*/
 
-// 2. Sumar elementos\
-let numeromayor = 1;
-let SumaNumeros = [1, 70, 3, 100, 66];
+let c = convertir(numero)
 
-for (let i = 0; i < SumaNumeros.length; i++) {
-    if(SumaNumeros[i] > numeromayor ){
-        numeromayor = SumaNumeros[i]
+//console.log(c)
+
+
+// crea una funcion que retorne los ultimos 3 caracteres 
+
+let oracion = "Amigos mios"
+
+function contar(texto){
+    return texto.substring(texto.length - 3, texto.length)    
+}
+
+let resultado = contar(oracion)
+console.log(resultado)
+
+
+//  Crea una funcion que reciba un string e imprima cada caracter uno por uno
+
+let palabra = "No me voy a rendir"
+
+function imprimirCaracteres(texto){
+    for (let i = 0; i < texto.length; i++ ){
+        console.log(texto[i])
     }
 }
-console.log(numeromayor)
+
+//imprimirCaracteres(palabra)
+
