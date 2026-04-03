@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Ruta de Aprendizaje - Fullstack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        /* Configuración crucial para imprimir en 1 sola hoja */
+        @page {
+            margin: 8mm; /* Márgenes de impresión pequeños */
+            size: portrait;
+        }
+        @media print {
+            body { background-color: white !important; font-size: 12px; }
+            .no-print { display: none !important; }
+            .print-border { box-shadow: none !important; border: 1px solid #cbd5e1 !important; }
+            .bg-slate-50\/50 { background-color: white !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen p-2 md:p-4 text-xs">
+
+    <!-- Botón para imprimir -->
+    <div class="max-w-5xl mx-auto mb-2 flex justify-end no-print">
+        <button onclick="window.print()" class="bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-medium shadow hover:bg-slate-700 transition flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd" />
+            </svg>
+            Imprimir (1 Hoja)
+        </button>
+    </div>
+
+    <!-- Contenedor Principal -->
+    <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden border border-slate-200 print-border">
+        
+        <!-- Cabecera Compacta -->
+        <header class="bg-slate-900 text-white p-4 text-center relative overflow-hidden">
+            <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2 relative z-10">🗺️ Mi Ruta Frontend / Backend</h1>
+            <div class="flex flex-wrap justify-center gap-2 relative z-10 text-xs">
+                <span class="bg-slate-800 border border-slate-700 px-3 py-1 rounded-lg">⏱️ Ritmo: <b class="text-emerald-400">2h/día</b> (Lun-Vie)</span>
+                <span class="bg-slate-800 border border-slate-700 px-3 py-1 rounded-lg">👉 <b class="text-blue-400">~10h</b> / sem</span>
+                <span class="bg-slate-800 border border-slate-700 px-3 py-1 rounded-lg">👉 <b class="text-purple-400">~40h</b> / mes</span>
+            </div>
+        </header>
+
+        <!-- Grid de Fases: 3 Columnas -->
+        <div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-3 bg-slate-50/50">
+
+            <!-- FASE 1 -->
+            <div class="bg-white border border-emerald-200 rounded-lg overflow-hidden shadow-sm flex flex-col">
+                <div class="bg-emerald-500 text-white p-2 px-3 flex justify-between items-center">
+                    <h2 class="font-bold text-sm">🟢 1. JavaScript Sólido</h2>
+                    <span class="bg-emerald-600 px-2 py-0.5 rounded text-[10px] font-bold">3 MESES</span>
+                </div>
+                <div class="p-3 flex-1 flex flex-col gap-2">
+                    <p class="text-emerald-800 bg-emerald-50 p-2 rounded text-[11px] italic">🎯 Obj: Entender el código, no solo pensarlo.</p>
+                    <ul class="list-disc pl-4 space-y-0.5 text-slate-700">
+                        <li>Variables, tipos, Scope</li>
+                        <li>Funciones (normal y flecha)</li>
+                        <li>Arrays (map, filter, reduce)</li>
+                        <li>Objetos (<b>MUY importante</b>)</li>
+                        <li>DOM y Eventos</li>
+                        <li>async/await + fetch (APIs)</li>
+                    </ul>
+                    <div class="mt-auto bg-slate-50 border border-slate-200 p-2 rounded">
+                        <p class="font-bold text-slate-800">🔥 App de tareas (localStorage)</p>
+                        <p class="text-[11px] text-slate-600 mt-1">🧠 Reto: Consumir API y mostrar datos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FASE 2 -->
+            <div class="bg-white border border-blue-200 rounded-lg overflow-hidden shadow-sm flex flex-col">
+                <div class="bg-blue-500 text-white p-2 px-3 flex justify-between items-center">
+                    <h2 class="font-bold text-sm">🔵 2. React</h2>
+                    <span class="bg-blue-600 px-2 py-0.5 rounded text-[10px] font-bold">2 MESES</span>
+                </div>
+                <div class="p-3 flex-1 flex flex-col gap-2">
+                    <p class="text-blue-800 bg-blue-50 p-2 rounded text-[11px] italic">🎯 Obj: Construir interfaces modernas.</p>
+                    <ul class="list-disc pl-4 space-y-0.5 text-slate-700">
+                        <li>Componentes y Props</li>
+                        <li>Estado con <code>useState</code></li>
+                        <li>Eventos en React</li>
+                        <li>Renderizado de listas</li>
+                        <li>Ciclo de vida: <code>useEffect</code></li>
+                    </ul>
+                    <div class="mt-auto bg-slate-50 border border-slate-200 p-2 rounded">
+                        <p class="font-bold text-slate-800">🔥 Proyectos:</p>
+                        <p class="text-[11px] text-slate-600">Contador, Tareas, App con API.</p>
+                        <p class="text-[11px] font-bold text-blue-700 mt-1">🧠 Reto: Dividir en componentes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FASE 3 -->
+            <div class="bg-white border border-purple-200 rounded-lg overflow-hidden shadow-sm flex flex-col">
+                <div class="bg-purple-600 text-white p-2 px-3 flex justify-between items-center">
+                    <h2 class="font-bold text-sm">🟣 3. Next.js</h2>
+                    <span class="bg-purple-700 px-2 py-0.5 rounded text-[10px] font-bold">2 MESES</span>
+                </div>
+                <div class="p-3 flex-1 flex flex-col gap-2">
+                    <p class="text-purple-800 bg-purple-50 p-2 rounded text-[11px] italic">🎯 Obj: Entrar al mundo profesional.</p>
+                    <ul class="list-disc pl-4 space-y-0.5 text-slate-700">
+                        <li>Routing (App router)</li>
+                        <li>Layouts</li>
+                        <li>Fetch de datos</li>
+                        <li>API routes (Backend)</li>
+                        <li>Server vs Client components</li>
+                    </ul>
+                    <div class="mt-auto bg-purple-50 border border-purple-200 p-2 rounded">
+                        <p class="font-bold text-purple-900">🔥 Proyecto fuerte:</p>
+                        <p class="text-[11px] text-purple-800">App con: Login + Base de datos + CRUD.</p>
+                        <p class="text-[10px] font-bold text-purple-600 mt-1 uppercase text-center border-t border-purple-200 pt-1">👉 Cerca de ser junior</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FASE 4 -->
+            <div class="bg-white border border-slate-300 rounded-lg overflow-hidden shadow-sm flex flex-col">
+                <div class="bg-slate-700 text-white p-2 px-3 flex justify-between items-center">
+                    <h2 class="font-bold text-sm">🗄️ 4. Base de Datos</h2>
+                    <span class="bg-slate-800 px-2 py-0.5 rounded text-[10px] font-bold">2 MESES</span>
+                </div>
+                <div class="p-3 flex-1 flex flex-col gap-2">
+                    <p class="text-slate-800 bg-slate-100 p-2 rounded text-[11px] italic">🎯 Obj: Entender datos de verdad.</p>
+                    <div class="text-slate-700">
+                        <p class="font-bold text-xs border-b border-slate-100 pb-1 mb-1">MongoDB (1º)</p>
+                        <ul class="list-disc pl-4 space-y-0.5 mb-2"><li>CRUD</li><li>Conexión con Next</li></ul>
+                        <p class="font-bold text-xs border-b border-slate-100 pb-1 mb-1">SQL (2º)</p>
+                        <ul class="list-disc pl-4 space-y-0.5"><li>SELECT, INSERT, UPDATE</li><li>Relaciones</li></ul>
+                    </div>
+                    <div class="mt-auto bg-slate-50 border border-slate-200 p-2 rounded">
+                        <p class="font-bold text-slate-800">🔥 Sistema de usuarios con BD</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FASE 5 -->
+            <div class="bg-white border border-orange-200 rounded-lg overflow-hidden shadow-sm flex flex-col">
+                <div class="bg-orange-500 text-white p-2 px-3 flex justify-between items-center">
+                    <h2 class="font-bold text-sm">🧠 5. Backend (FastAPI)</h2>
+                    <span class="bg-orange-600 px-2 py-0.5 rounded text-[10px] font-bold">1.5 MESES</span>
+                </div>
+                <div class="p-3 flex-1 flex flex-col gap-2">
+                    <p class="text-orange-900 bg-orange-50 p-2 rounded text-[11px] italic">🎯 Obj: Entender backend separado.</p>
+                    <ul class="list-disc pl-4 space-y-0.5 text-slate-700">
+                        <li>Crear API con FastAPI</li>
+                        <li>Rutas (GET, POST)</li>
+                        <li>Conectar con BD</li>
+                        <li>Autenticación básica</li>
+                    </ul>
+                    <div class="mt-auto bg-orange-50 border border-orange-200 p-2 rounded">
+                        <p class="font-bold text-orange-900">🔥 API de usuarios</p>
+                        <p class="text-[11px] text-orange-800 mt-1">Login + CRUD completo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FASE 6 & 7 (Apiladas para ahorrar espacio) -->
+            <div class="flex flex-col gap-3">
+                
+                <!-- FASE 6 -->
+                <div class="bg-white border border-indigo-200 rounded-lg overflow-hidden shadow-sm flex-1 flex flex-col">
+                    <div class="bg-indigo-600 text-white p-1.5 px-3 flex justify-between items-center">
+                        <h2 class="font-bold text-xs">🛠️ 6. Herramientas</h2>
+                        <span class="bg-indigo-700 px-1.5 py-0.5 rounded text-[9px] font-bold">1 MES</span>
+                    </div>
+                    <div class="p-2.5 flex-1 flex flex-col gap-1.5">
+                        <ul class="list-disc pl-4 text-[11px] text-slate-700 grid grid-cols-2 gap-x-1">
+                            <li>Git / GitHub</li>
+                            <li>Deploy (Vercel)</li>
+                            <li>Vars. de entorno</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FASE 7 -->
+                <div class="bg-white border border-yellow-300 rounded-lg overflow-hidden shadow-sm flex-1 flex flex-col">
+                    <div class="bg-yellow-400 text-yellow-900 p-1.5 px-3 flex justify-between items-center">
+                        <h2 class="font-bold text-xs">🟡 7. TypeScript</h2>
+                        <span class="bg-yellow-500 px-1.5 py-0.5 rounded text-[9px] font-bold">1.5 MESES</span>
+                    </div>
+                    <div class="p-2.5 flex-1 flex flex-col gap-1.5">
+                        <ul class="list-disc pl-4 text-[11px] text-slate-700 grid grid-cols-2 gap-x-1">
+                            <li>Tipos básicos</li>
+                            <li>Interfaces</li>
+                            <li>TS en React/Next</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FASE FINAL (Ocupa las 3 columnas horizontales) -->
+            <div class="bg-gradient-to-r from-red-600 to-rose-600 border border-red-300 rounded-lg overflow-hidden shadow-sm md:col-span-3 flex flex-col mt-1">
+                <div class="bg-black/20 text-white p-2.5 px-4 flex justify-between items-center">
+                    <h2 class="font-extrabold text-sm flex items-center gap-2">🔥 FASE FINAL — PROYECTOS REALES (2 - 3 Meses)</h2>
+                    <span class="bg-white text-red-700 px-2 py-0.5 rounded text-[10px] font-extrabold tracking-wider">NIVEL JUNIOR</span>
+                </div>
+                <div class="p-4 flex flex-col md:flex-row gap-4 items-stretch text-white">
+                    <div class="flex-1 bg-white/10 p-3 rounded border border-white/20">
+                        <h4 class="font-bold text-xs mb-1 text-red-100">1. App Completa</h4>
+                        <ul class="list-disc pl-4 text-[11px] space-y-0.5">
+                            <li>Login autenticado</li><li>Base de datos conectada</li><li>CRUD completo</li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 bg-white/10 p-3 rounded border border-white/20">
+                        <h4 class="font-bold text-xs mb-1 text-red-100">2. App tipo Producto</h4>
+                        <ul class="list-disc pl-4 text-[11px] space-y-0.5">
+                            <li>E-commerce básico</li>
+                            <li class="list-none text-center font-bold my-0.5 text-[10px]">- o -</li>
+                            <li>Red social simple</li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 bg-white/10 p-3 rounded border border-white/20">
+                        <h4 class="font-bold text-xs mb-1 text-red-100">3. API Propia</h4>
+                        <ul class="list-disc pl-4 text-[11px] space-y-0.5">
+                            <li>Backend en FastAPI o Next</li>
+                            <li>Conectado a tu propio frontend</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
