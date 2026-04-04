@@ -1,10 +1,19 @@
-// objeto 
-
-persona = {
-    nombre : "Esteban",
+// probando metodos de los objetos
+let persona = {
+    nombre_ : "Esteban",
     apellido : "Garzon",
-    edad : 19
+    email : "yersmangarzon@gmail.com",
+    get nombreCompleto(){
+        return `${this.nombre} ${this.apellido}`
+    },
+    get nombre(){
+        return this.nombre_ 
+    },
+
+    set nombre(nombre){
+        this.nombre_ = nombre.toUpperCase()
+    }
 }
 
-console.log(persona.nombre)
-
+persona.nombre = "Esteban"
+console.log(persona)
