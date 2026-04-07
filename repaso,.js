@@ -1,19 +1,12 @@
-// probando metodos de los objetos
-let persona = {
-    nombre_ : "Esteban",
-    apellido : "Garzon",
-    email : "yersmangarzon@gmail.com",
-    get nombreCompleto(){
-        return `${this.nombre} ${this.apellido}`
-    },
-    get nombre(){
-        return this.nombre_ 
-    },
-
-    set nombre(nombre){
-        this.nombre_ = nombre.toUpperCase()
-    }
+function persona(nombre, apellido, edad){
+    this.nombre = nombre
+    this.apellido = apellido
+    this.edad = edad
 }
 
-persona.nombre = "Esteban"
-console.log(persona)
+let padre = new persona("Esteban", "Garzon", 10) 
+
+console.log(padre)
+
+
+
