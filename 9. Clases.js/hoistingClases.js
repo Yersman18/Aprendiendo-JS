@@ -21,6 +21,6 @@ class persona{
 
 }
 
-let persona1 = new persona ("Esteban", "Garzon")
-persona1.nombre = "Yersman"
-console.log(persona1.nombre)
+let persona1 = new persona ("Esteban", "Garzon") // creamos el nuevo objeto
+persona1.nombre = "Yersman" // set nombre ("Juan Carlos")
+console.log(persona1.nombre) // get nombre 

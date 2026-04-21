@@ -1,95 +1,43 @@
-/* 
-let numeros = [ 5, 10, 15]
-let suma = 0
-for (let i = 0; i < numeros.length; i++){
-    suma += numeros[i]
-}
-
-let numeros = [1, 2, 3, 4]
-let multiplicacion = []
-
-
-for (let i = 0; i < numeros.length; i ++){
-    multiplicacion = numeros[i] * 2
-    console.log(multiplicacion)
-}
-
-
-let usuarios = [
-  { nombre: "Ana", edad: 17 },
-  { nombre: "Luis", edad: 20 },
-  { nombre: "Carlos", edad: 18 }
-]
-
-
-
-for (let i in usuarios){
-    let usuario = usuarios[i]
-    if (usuario.edad >= 18) {
-        console.log(usuario)
-    }
-}
-
-//let persona = usuarios[0]
-
-//console.log(persona.nombre , persona.edad)
--------------------------------------------CLASES--------------------------------------
-*/
 /*
-Crea una clase persona que tenga: 
-nombre 
-edad
-y crea un objeto e imprimelo
-
-class persona{
-    constructor(nombre, edad){
+class Usuario{
+    constructor(nombre, correo){
         this.nombre = nombre
-        this.edad = edad
-    }
-}
-
-let persona1 = new persona("Esteban", 19)
-console.log(persona1)
-======================================================
-2. 
-*/
-
-class saludoPersona{
-    constructor(nombre, apellido){
-        this.nombre = nombre
-        this.apellido = apellido
-    }        
-    saludo(){
-        console.log(this.nombre) 
-    }
-}
-let persona = new saludoPersona("Yersman", "Cruz")
-persona.saludo()
-
-3.
-/*
-class usoGet{
-    constructor(nombre, edad){
-        this._nombre = nombre
-        this.edad = edad
+        this.correo = correo
     }
     get nombre(){
-        if (this._nombre.length < 3){
-            return "El nombre contiene menos de 3 caracteres, nombre invalido"        
+        return this._nombre.toUpperCase()
+    }
+    set nombre(valor){
+        if (valor.length < 3){
+            console.log("No puedes agregar un nombre menor de tres caracteres")
+        }
+        else 
+            this._nombre = valor.toUpperCase()
+    }
+    get correo(){
+        return this._correo
+    }
+    set correo(valor2){
+        if (valor2.includes("@")){
+            this._correo = valor2
         }
         else
-            return this._nombre.toUpperCase()
+            console.log("El correo no es valido")
+    }
+    saludo(){
+        return (`Hola soy ${this.nombre} y mi correo es ${this.correo}`)
+
     }
 }
 
-let persona1 = new usoGet("Es", 19)
-console.log(persona1.nombre)
 
+//1 Guardar el nombre mayor o igual d 3 caracteres
+let user = new Usuario("yer", "correo_mal@")
+
+user.nombre = "Yer"
+user.correo = "yersmangarzon@gmail.com"
+
+console.log(user.saludo())
+  
 */
-
-
-
-
-
-
 
