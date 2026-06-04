@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- los ID son unicos -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo con Java Script</title>
+</head>
+<body>
+    <h1 id="cabecero">Hola</b> con Java Script</h1>
+    <p id="parrafo1">Saludos!</p>
+    <script>
+        let cabecero = document.getElementById('cabecero')// (innerHTML) esto es lo que nos trae el texto del archivo de html y nos funciona como para ambos
+        console.log(`cabecero de la variable: ${cabecero.innerHTML}`) // otra forma podriamos acceder a la propiedad de la siguiente manera: cabecero.innerHTML 
+        cabecero.innerHTML = "Cambiando Cabecero"
+        let parrafo = document.getElementById('parrafo') // tambien nos sirve para modificar el contenido del parrafo
+        console.log(`parafo de la variable de parrafo: ${parrafo.innerHTML}` )
+        parrafo.innerHTML = 'Cambiando parrafo' // con .(innerHTML) tambien podemos modificar los valores 
+    </script>
+</body>
+</html>
+

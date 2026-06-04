@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiando de estilos de las paginas</title>
+</head>
+<body>
+    <h1 onclick="cambiandoTexto(this)">Bienvenidos a todos</h1>
+    <script>
+    function cambiandoTexto(titulo){
+        console.log(titulo) //<h1 onclick="cambiandoTexto(this)">Cambiando el titulo</h1>
+        console.log(titulo.innerHTML) 
+        titulo.innerHTML = "Cambiando el titulo" 
+        console.log(titulo.innerHTML) // Cambiando el titulo
+    }    
+    </script>
+</body>
+</html>

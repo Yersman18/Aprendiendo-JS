@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion de tareas</title>
+</head>
+<style>
+    .titulo{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .contenedorCabecero{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="contenedorCabecero">
+        <h1 class="titulo">Aplicacion de tareas</h1>
+    </div>
+    <h3 id="tareasAgregadas">Tareas Agregadas: </h3>
+    <form id="tareas">
+        <p>Escribe una tarea</p>
+        <input id="campoTarea" name="tarea" type="text" placeholder="Ej: Estudiar Programacion">
+        <p></p>
+    </form>
+    <button onclick="agregarTarea()">Agregar tarea</button>
+    <button onclick="eliminarTareas()">Eliminar tareas</button>
+    <div id="tareasVacias"></div>
+    <div id="mostrarTareas"></div>
+    <script>
+        let tareasAgregadas = []
+        function agregarTarea(){
+            let listaTareas = document.forms['tareas']
+            for(let i of listaTareas){
+                if (i.value == ""){
+                    let errorCampo = document.getElementById("tareasVacias")
+                    errorCampo.innerHTML = "No se permiten campos vacios"
+                }
+                else{
+                    tareasAgregadas.push(i.value) // agregamos la tarea al array
+                    //document.getElementById('mostrarTareas').innerHTML += "-" + " " + i.value + "<br>"
+                    let restablecerError = document.getElementById("tareasVacias").innerHTML = ""
+                }
+            }
+            
+            // Nos sirve para poder agregar un valor a un array y poder mostrarlo en pantalla
+            let contenedor = document.getElementById('mostrarTareas')
+
+            contenedor.innerHTML = " "
+
+            for(j of tareasAgregadas){
+                contenedor.innerHTML += "-" + j + '<br>'
+            }
+
+            //borrar placeholder
+            let restablecerCampo = document.getElementById("campoTarea")
+            restablecerCampo.value = "" 
+            let contadorTareas = tareasAgregadas.length
+            document.getElementById('tareasAgregadas').innerHTML = "Tareas Agregadas: " + contadorTareas    
+        }
+
+        function eliminarTareas(){
+            let restablecerTareas = document.getElementById('mostrarTareas')
+            restablecerTareas.innerHTML = " "
+
+            let restablecerContador = document.getElementById('tareasAgregadas')
+            restablecerContador.innerHTML = "Tareas Agregadas:"
+            tareasAgregadas.length = 0 // asi podamos borar todos los elementos de la lista
+        }
+        </script>
+</body>
+</html>

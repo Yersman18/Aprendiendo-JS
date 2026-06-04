@@ -1,11 +1,20 @@
 class Persona{
 
-    static contadorObjetosPersona = 0;
+    static contadorPersonas = 0; // atributo no estatico
+
+    static get MAX_OBECT(){
+        return 4
+    }
 
     constructor(nombre, apellido){
         this._nombre = nombre
-        this._apellido = apellido 
-        Persona.contadorObjetosPersona ++  
+        this._apellido = apellido
+        if(Persona.contadorPersonas < Persona.MAX_OBECT){
+            this.idpersona = ++Persona.contadorPersonas 
+        } 
+        else 
+            console.log("Has superado el limite de objetos creados")
+    
     }
     get nombre(){
         return this._nombre
@@ -20,7 +29,7 @@ class Persona{
          this._apellido = apellido
     }
     nombreCompleto(){
-        return this.nombre + " " + this.apellido
+        return this.idpersona + " " + this.nombre + " " + this.apellido
     }
     toString(){
         return this.nombreCompleto()
@@ -49,19 +58,16 @@ class Empleado extends Persona{
 let persona1 = new Persona("esteban", "Garzon")
 // console.log (persona1.toString()) // esteban Garzon
 
-let persona2 = new Empleado("Yersman", "Cruz")
+let empleado2 = new Empleado("Yersman", "Cruz")
 
+let persona3 = new Persona("Aura", "Quintin")
 
-//Persona.saludo() //saludos desde un metodo estatico
+let persona4 = new Persona("Aura", "Quintin")
 
-//console.log(persona1.saludo()) // TypeError: persona1.saludo is not a function
+let persona5 = new Persona("Orlando", "Sarmiento")
 
-// Empleado.saludo() desde la clase hija (Empleado) podemos llamar al meotodo static
-
-
-Persona.saludar2(persona1)
-console.log(Persona.contadorObjetosPersona)
-
-
-
+console.log(persona1.toString())
+console.log(empleado2.toString())
+console.log(persona3.toString())
+console.log(persona4.toString())
 

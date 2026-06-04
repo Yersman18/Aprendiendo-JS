@@ -1,11 +1,14 @@
 class Persona{
 
-    static contadorObjetosPersona = 0;
+    static contadorPersonas = 0; // atributo  estatico
+
+    email = "valor default email"// atributo no estatico 
+
 
     constructor(nombre, apellido){
         this._nombre = nombre
         this._apellido = apellido 
-        Persona.contadorObjetosPersona ++  
+        this.idpersona = ++Persona.contadorPersonas 
     }
     get nombre(){
         return this._nombre
@@ -20,7 +23,7 @@ class Persona{
          this._apellido = apellido
     }
     nombreCompleto(){
-        return this.nombre + " " + this.apellido
+        return this.idpersona + " " + this.nombre + " " + this.apellido
     }
     toString(){
         return this.nombreCompleto()
@@ -49,19 +52,11 @@ class Empleado extends Persona{
 let persona1 = new Persona("esteban", "Garzon")
 // console.log (persona1.toString()) // esteban Garzon
 
-let persona2 = new Empleado("Yersman", "Cruz")
+let empleado2 = new Empleado("Yersman", "Cruz")
 
 
-//Persona.saludo() //saludos desde un metodo estatico
 
-//console.log(persona1.saludo()) // TypeError: persona1.saludo is not a function
-
-// Empleado.saludo() desde la clase hija (Empleado) podemos llamar al meotodo static
-
-
-Persona.saludar2(persona1)
-console.log(Persona.contadorObjetosPersona)
-
-
+console.log(persona1.toString())
+console.log(empleado2.toString())
 
 

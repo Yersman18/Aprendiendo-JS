@@ -1,3 +1,5 @@
+"use strict"
+
 class Usuario{
     constructor(nombre){
         this.nombre = nombre
@@ -8,9 +10,9 @@ class Usuario{
     set nombre(nombre){
         this._nombre = nombre
     }
-    // toString(){
-    //     return this._nombre
-    // }
+    toString(){
+        return this._nombre
+    }
 }
 
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de bienvenida</title>
+</head>
+<body>
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Esteban"><br/>
+        Apellido: <input type="text" name="apellido" value="Garzon">
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <button onclick="limpiarInformacion()">Limpiar</button>
+    <div id="mostrarValores"></div>
+    <div id="requirirCampos"></div>
+    <script>   
+        function mostrarValores(){
+            let valores = document.forms['formulario']
+            if(valores.nombre.value == "" || valores.apellido.value == ""){
+                let campos = document.getElementById('requirirCampos') 
+                campos.innerHTML = "Complete los campos"                
+            }
+            else {
+                let nombreCompleto = valores.nombre.value + ' ' + valores.apellido.value
+                let mostrar = `Bienvenido ${nombreCompleto} `
+                let imprimir = document.getElementById('mostrarValores')
+                imprimir.innerHTML = mostrar
+                let quitarAdvertencia = document.getElementById('requirirCampos')
+                quitarAdvertencia.innerHTML = "" 
+                
+            }
+        }
+        function limpiarInformacion(){
+            let limpiar = ""
+            let valores = document.forms['formulario']
+            for (i of valores){
+                i.value = limpiar
+            }
+            let limpiarMensaje = document.getElementById('requirirCampos')
+            limpiarMensaje.innerHTML = limpiar
+            let limpiarInformacion = document.getElementById('mostrarValores')
+            limpiarInformacion.innerHTML = limpiar 
+
+        }
+    </script>
+</body>
+</html>

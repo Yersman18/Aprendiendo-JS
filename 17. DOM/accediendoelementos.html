@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- los ID son unicos -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de formulario</title>
+</head>
+<body>
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" placeholder="nombre" value="Esteban"/>
+        <br>
+        Apellido: <input type="text" name="apellido" placeholder="apellido" value="Yersman"/>
+        <br>
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="mostrar"></div>
+    <!-- forma para el manejo de un formulario -->
+    <script>
+        function mostrarValores(){ 
+            let formulario = document.forms["formulario"]
+            //let texto = ''
+            // FORMA PARA PODER ACCEDER A LOS DATOS DE MANERA INDIVIDUAL
+            let nombre = formulario['nombre']
+            let apellido = formulario['apellido']
+            texto = nombre.value + apellido.value
+            document.getElementById("mostrar").innerHTML = texto // mostrar datos en el navegador
+            console.log(texto) // mostrar datos en consola
+            
+        }
+    </script>
+</body>
+</html>

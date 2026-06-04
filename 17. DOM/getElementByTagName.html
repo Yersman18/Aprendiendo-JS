@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- los ID son unicos -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo con Java Script</title>
+</head>
+<body>
+    <h1 id="cabecero">Hola</b> con Java Script</h1>
+    <p>Saludos!</p> 
+    <p id="parrafo3">Este es otro parrafo</p>
+    <hr>
+    <script>
+        let parrafos = document.getElementsByTagName('p') // nos funciona sin el id declarado en el objeto 
+        console.log(`Parrafos: ${parrafos.length}`)
+        for(let i=0; i < parrafos.length; i++ ){
+            console.log(` ${i}: ${parrafos[i].innerHTML}`) // para poder acceder a la propidad utilizamos el innertHTML
+        }
+    </script>
+</body>
+</html>
+

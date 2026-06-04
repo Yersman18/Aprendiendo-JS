@@ -1,0 +1,63 @@
+<!DOCTYp E html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewp ort" content="width=device-width, initial-scale=1.0">
+    <title>p anel dinamico DOM</title>
+</head>
+<style>
+    .parrafos{
+        color: blue;
+    }
+</style>
+<body>
+    <h1 class="encabezado">Bienvenido al curso de DOM</h1>
+    <p class="parrafos">Lorem ip sum dolor sit amet consectetur adip isicing elit. Facere volup tatibus p ossimus aut. Excep turi, vero temp ora! Laudantium maxime necessitatibus nobis ea quas p erferendis nesciunt!</p >
+    <p class="parrafos">Lorem ip sum, dolor sit amet consectetur adip isicing elit. Magnam recusandae dicta exercitationem.</p >
+    <p class="parrafos">Lorem, ip sum dolor sit amet consectetur adip isicing elit. Nihil, p orro nesciunt doloremque volup tas vitae consectetur, eaque nam magni sint debitis sap iente, eos error?</p >
+    <img src="js.png" alt="imagen" id="imagenJs"><br>
+    <button onclick="cambiarTextos()"> Cambiar parrafos</button>
+    <button onclick="cambiarImagen()"> Cambiar imagen</button>
+    <button onclick="cambiarColores()">Cambiar Colores</button>
+    <button onclick="restaurar()">Restaurar</button>
+    <script>
+        let textos = ''
+        function cambiarTextos(){
+            let elementos = document.getElementsByClassName('parrafos')
+            for(i of elementos){
+                i.innerHTML = "Cambiando los valores de los parrafos"                
+            }
+        }
+
+        function cambiarImagen(){
+            let imagen = document.getElementById('imagenJs')
+            imagen.src = "html.png"
+        }
+
+        function cambiarColores(){
+            let cambioColor = document.getElementsByClassName("parrafos")
+            for (let j of cambioColor){
+                    j.style.color = "red"
+            }
+        
+        }
+        function restaurar(){
+            let textoOriginal3 = "Lorem, ip sum dolor sit amet consectetur adip isicing elit. Nihil, p orro nesciunt doloremque volup tas vitae consectetur, eaque nam magni sint debitis sap iente, eos error?"
+            let textoOriginal2 = "Lorem ip sum, dolor sit amet consectetur adip isicing elit. Magnam recusandae dicta exercitationem."
+            let textoOriginal1 = "Lorem ip sum dolor sit amet consectetur adip isicing elit. Facere volup tatibus p ossimus aut. Excep turi, vero temp ora! Laudantium maxime necessitatibus nobis ea quas p erferendis nesciunt!"
+            let restaurarcolor = document.getElementsByClassName('parrafos')
+            for (let l of restaurarcolor){
+                l.style.color = "blue"
+            }
+            let restaurartexto = document.getElementsByClassName('parrafos')
+                restaurartexto[0].innerHTML = textoOriginal1
+                restaurartexto[1].innerHTML = textoOriginal2
+                restaurartexto[2].innerHTML = textoOriginal3
+            let restaurarImagen = document.getElementById("imagenJs")
+            restaurarImagen.src = "js.png"
+        }
+            
+    </script>
+    
+</body>
+</html>

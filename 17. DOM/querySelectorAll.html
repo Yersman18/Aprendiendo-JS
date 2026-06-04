@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- los ID son unicos -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<style>
+    .colores{
+        color: blue;
+    }
+</style>
+<body>
+    <h1 class="colores">Hola</b> con Java Script</h1>
+    <p class="colores">Saludos!</p> 
+    <p class="colores">Este es otro parrafo</p>
+    <hr>
+    <script>
+        let elementos = document.querySelectorAll("p.colores") // nos trae solo los elementos de tipo parrafo con la clase de "colores" 
+        console.log(`Numero de elementos: ${elementos.length}`)
+        for(elemento of elementos){
+            console.log(elemento.innerHTML)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* estilos de la pagina */
+</style>
+<body>
+    <h1 id="titulo">Hola</h1>
+    <button onclick="cambiartexto()">Cambiar texto</button>
+    <div id="mostrandoValor"></div>
+    <script>
+        function cambiartexto(){
+            let elemento = document.getElementById('titulo')
+            elemento.innerHTML = "Bienvenido"
+            console.log(elemento.innerHTML)
+        }
+    </script>
+    <hr>
+    <!-- SEGUNDO EJERCICIO -->
+    <div id="valor"></div>
+    <button onclick="mensaje()">Presiona el boton</button>
+    <script>
+        function mensaje(){
+            let elemento2 = document.getElementById('valor')
+            elemento2.innerHTML = "Estoy aprendiendo a programar 👨🏼‍💻"
+            // elemento2.innerHTML asi tambien podemos imprimir para que nos aparezca nada en la consola
+            console.log(elemento2.innerHTML)
+        }
+    </script>
+    <hr>
+    <!-- TERCER EJERCICIO
+    <p id="parrafo">Hola bienvenidos al mundo de la programacion</p>
+    <script>
+        console.log(document.getElementById('parrafo').innerHTML)
+    </script> -->
+    <hr>
+    <!-- CUARTO EJECICIO -->
+    <!-- <p id="parrafos">Estos son los parrafos</p>
+    <p id="parrafos">Estos son los parrafos</p>
+    <p id="parrafos">Estos son los parrafos</p>
+    <script>
+        let texto = ''
+        let elementos = document.getElementsByTagName('p')
+        for(parrafo of elementos){
+            parrafo.innerHTML = "Aprendiendo DOM"
+            console.log(parrafo.innerHTML)
+        }
+    </script> -->
+    <!-- 5 EJERCICIO -->
+    <h1 class="mensaje">Hola a todos</h1>
+    <p class="mensaje">Sigue practicando</p>    
+    <script>
+        let CambioContenido = document.getElementsByClassName('mensaje')
+        for(elemento of CambioContenido){
+            elemento.innerHTML = "Cambiando el contenido"
+            console.log(elemento.innerHTML)
+        }
+        </script>
+    <hr>
+    <!-- 6 EJERCICIO -->
+     <div id="valor"></div>
+    <script>
+        let elementosGen = document.getElementsByTagName('p').length
+        let total = document.getElementById('valor').innerHTML = elementosGen
+        console.log(`Hay ${total} parrafos`)
+    </script>
+    <hr>
+    <!-- 7 EJERCICIO -->
+    <h1 class="Parra">Otro ejercicio</h1>
+    <p>Java Script</p>
+    <script>
+        console.log("")
+        let contenido = document.querySelectorAll('p')
+        for(i of contenido){
+            i.innerHTML = "Cambiando contenido de otro ejercicio"
+        }
+    </script>
+    <hr>
+    <!-- 9 EJERICICIO -->
+     <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Esteban "><br>
+        Apellido: <input type="text" name="apellido" value="Garzon">
+     </form>
+     <div id="valores"></div>
+     <script>
+        let textos = ''
+        let formulario = document.forms['formulario']
+        for(objeto of formulario){
+            textos += objeto.value  
+        }
+        let elementos = document.getElementById('valores')
+        elementos.innerHTML = textos
+        console.log(elementos.innerHTML)
+     </script>
+
+</body>
+</html>

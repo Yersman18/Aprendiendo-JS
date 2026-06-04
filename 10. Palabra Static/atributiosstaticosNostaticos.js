@@ -1,6 +1,8 @@
 class Persona{
 
-    static contadorObjetosPersona = 0;
+    static contadorObjetosPersona = 0; // atributo no estatico
+
+    email = "valor default email"// atributo estatico 
 
     constructor(nombre, apellido){
         this._nombre = nombre
@@ -60,8 +62,15 @@ let persona2 = new Empleado("Yersman", "Cruz")
 
 
 Persona.saludar2(persona1)
+
 console.log(Persona.contadorObjetosPersona)
 
+
+
+
+
+console.log(persona1.email) // valor default email
+console.log(Empleado.email) // undefined
 
 
 

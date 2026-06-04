@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiando el contenido</title>
+</head>
+<body>
+    <p id="parrafo">Bienvenidos a todos</p>
+    <button onclick="cambiandoElValor()">Cambiar el valor</button>
+    <script>
+        function cambiandoElValor(){
+            //document.getElementById('parrafo').innerHTML = 'Cambiando el valor' // asi cambiamos el valor anterior 
+            document.getElementById('parrafo').innerHTML += ' <br/> Cambiando el valor' // nos muestra el valor anterior y el actual
+        }
+
+    </script>
